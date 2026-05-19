@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo img {
+    width: 250px;
+    max-width: 150%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2f5eff;
+}
+
+.hero {
+    height: 85vh;
+    background-image: url('images/Tesla_Before.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0,0,0,0.5);
+    #backdrop-filter: blur(2px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-overlay p {
+    font-size: 1.4rem;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    padding: 16px 36px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: scale(1.05);
+    background-color: #2f5eff;
+    color: white;
+}
+
+.services-preview,
+.pricing-preview {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.services-preview h2,
+.pricing-preview h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+
+.service-container,
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card,
+.price-card {
+    background-color: white;
+    padding: 40px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card h3,
+.price-card h3 {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.page-header {
+    padding: 100px 20px 60px;
+    text-align: center;
+    background-color: white;
+}
+
+.page-header h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.services-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 70px 60px 100px;
+    background-color: #f5f5f5;
+}
+
+.detail-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.detail-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.detail-card p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.detail-card h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.detail-card ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 900px) {
+    .services-detail {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 80px;
+    }
+
+    .page-header h1 {
+        font-size: 3rem;
+    }
+}
+
+
+
+/*gallery section*/
+
+.gallery-section {
+    padding: 70px 40px 100px;
+    background-color: #f5f5f5;
+}
+
+.before-after-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.comparison-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.comparison-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.comparison-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.comparison-images div {
+    text-align: center;
+}
+
+.comparison-images p {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.comparison-images img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.comparison-images img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+    .comparison-images {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-card {
+        padding: 25px;
+    }
+}
+
+.active {
+    color: #2f5eff !important;
+}
+
+.addon-card {
+    grid-column: span 3;
+}
+
+.addon-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.addon-item h3 {
+    margin-bottom: 8px;
+}
+
+.addon-item p {
+    margin: 0;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .addon-card {
+        grid-column: span 1;
+    }
+}
+
+.service-note {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border-radius: 16px;
+}
+
+.service-note h3 {
+    margin-bottom: 18px;
+}
+
+.service-note p {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    color: #333;
+}
